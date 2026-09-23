@@ -1,12 +1,14 @@
 body {
-    background: linear-gradient(to bottom, #3f3432, #677358);
+    /* Set the background color, height, and font for the entire page */
+    background: #fff;
     height: 100vh;
     margin: 0;
-    padding-top: 10px;
+    padding: 150px 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
+    /* Style the navigation bar with flexbox, background color, padding, and positioning */
     display: flex;
     background: #fff;
     border-radius: 15px;
@@ -20,6 +22,17 @@ body {
     left: 10px;
     right: 10px;
     z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-120%);
+}
+
+.logo img {
+    display: block;
+    width: 120px;
+    height: auto;
 }
 
 .menu {
@@ -30,13 +43,14 @@ body {
     padding: 10px;
 }
 
+/* Style for individual menu items and links */
 .item {
     margin: 0 15px;
 }
 
 .item a {
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: bold;
 }
 
@@ -57,32 +71,151 @@ button:hover {
     background-color: #38402f;
 }
 
-body {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+/* Main content styling */
 h1 {
     text-align: left;
-    color: #fff;
+    color: #000;
     font-size: 3em;
     margin-bottom: 20px;
 }
 
 h3 {
-    color: #fff;
+    color: #000;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 p {
     text-align: left;
-    color: #fff;
+    color: #000;
     font-size: 1.2em;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
+/* Hero section styling with background image and overlay */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Flowers1.jpg') no-repeat center center;
+    background-size: cover;
+}
 
+.hero h1 { color: #fff; font-size: 3.5rem; letter-spacing: 0.05em; }
+.hero p  { color: #fff; font-size: 1.2rem; opacity: 0.7; margin-top: 0.5rem; }
+
+/* Timeline section styling with max width, margin, and padding */
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    }
+
+.era {
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.era-title {
+    font-size: 2rem;
+    border-bottom: 1px solid #2a4a3a;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Individual piece styling with grid layout, gap, and alignment */
+.piece {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+/* Alternate the direction of pieces for even-numbered children */
+.piece:nth-child(even) {
+    direction: rtl;
+}
+.piece:nth-child(even) > * {
+    direction: ltr;
+}
+
+.piece img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.piece-info h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+.piece-info .date {
+    font-size: 0.9rem;
+    color: #677358;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.piece-info p { opacity: 0.7; line-height: 1.5; }
+
+/* Footer styling with grid layout, background color, padding, and responsive design */
+.site-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    background: #38402f;
+    color: #fff;
+    padding: 3rem max(2rem, calc((100% - 1200px) / 2));
+}
+
+.site-footer img {
+    width: 120px;
+    margin-bottom: 1rem;
+}
+
+.site-footer p {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.site-footer h2 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #7ab89a;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 1.5rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 700px) {
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        grid-column: auto;
+    }
+}

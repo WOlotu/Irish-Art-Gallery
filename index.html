@@ -7,20 +7,108 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
+<!--Navigation bar-->
 <nav class="navbar">
-  <img src="logo-url" alt="Logo" class="logo" />
+  <a href="index.html" class="logo" aria-label="Ealaín Gallery home">
+    <img src="images/Logo.png" alt="Ealaín Gallery logo">
+  </a>
+  <!--Navigation menu with links to other pages-->
   <ul class="menu">
-    <li class="item"><a href="#">Home</a></li>
-    <li class="item"><a href="#">About Us</a></li>
-    <li class="item"><a href="#">Contact Us</a></li>
-    <li class="item"><a href="#">Blog</a></li>
+    <li class="item"><a href="index.html">Home</a></li>
+    <li class="item"><a href="about.html">About Us</a></li>
+    <li class="item"><a href="contact.html">Contact Us</a></li>
+    <li class="item"><a href="blog.html">Blog</a></li>
   </ul>
   <button type="submit">Call Now</button>
 </nav>
 
+<!--Main content-->
 <body>
   <div class="container">
     <h1>Welcome to Ealaín Gallery</h1>
     <p>Discover the beauty of art and creativity at Ealaín Gallery. Explore our collection of exquisite artworks and immerse yourself in the world of artistic expression.</p>
   </div>
 </body>
+
+<header class="hero">
+    <h1>A Journey Through Irish Art</h1>
+    <p>From ancient stone to modern canvas</p>
+  </header>
+
+  <main class="timeline">
+
+    <!--Each era is a section-->
+    <!--Will add more to each description-->
+    <section class="era" data-era="ancient">
+      <h2 class="era-title">Ancient Ireland</h2>
+
+      <!--Placeholders for artwork descriptions and images-->
+      <div class="piece">
+        <img src="images/newgrange.jpg" alt="Newgrange spiral carving" loading="lazy">
+        <div class="piece-info">
+          <h3>Newgrange Passage Tomb</h3>
+          <span class="date">c. 3200 BCE</span>
+          <p>Spiral carvings on the entrance stone</p>
+        </div>
+      </div>
+
+      <div class="piece">
+        <img src="images/gold-lunulae.jpg" alt="Gold Lunulae" loading="lazy">
+        <div class="piece-info">
+          <h3>Gold Lunulae</h3>
+          <span class="date">c. 2400 BCE</span>
+          <p>Crescent-shaped gold necklaces</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="era" data-era="medieval">
+      <h2 class="era-title">Medieval Ireland</h2>
+
+      <div class="piece">
+        <img src="images/book-of-kells.jpg" alt="Book of Kells" loading="lazy">
+        <div class="piece-info">
+          <h3>Book of Kells</h3>
+          <span class="date">c. 800 CE</span>
+          <p>Illuminated Gospel manuscript</p>
+        </div>
+      </div>
+
+      <div class="piece">
+        <img src="images/tara-brooch.jpg" alt="Tara Brooch" loading="lazy">
+        <div class="piece-info">
+          <h3>Tara Brooch</h3>
+          <span class="date">c. 710–750 CE</span>
+          <p>Gold and bronze ornate brooch</p>
+        </div>
+      </div>
+    </section>
+
+  <!--Possible more sections for other periods here-->
+
+  </main>
+
+  <!--Footer with contact information-->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="images/Logo.png" alt="Ealaín Gallery logo">
+      <p>Celebrating the story of Irish art.</p>
+    </div>
+    <div class="footer-links">
+      <h2>Explore</h2>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="footer-contact">
+      <h2>Connect With Us</h2>
+      <a href="mailto:EG@email.com">EG@email.com</a>
+      <span>+353 1 234 5678</span>
+    </div>
+  </footer>
+
+  <!--GSAP and ScrollTrigger scripts for timeline animations-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
