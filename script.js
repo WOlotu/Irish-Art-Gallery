@@ -24,9 +24,13 @@ window.addEventListener('scroll', () => {
 // Era titles slide in
 gsap.utils.toArray('.era-title').forEach(title => {
     gsap.from(title, {
-    opacity: 0, x: -40,
-    duration: 0.8,
-    scrollTrigger: { trigger: title, start: 'top 80%' }
+        opacity: 0,
+        x: -40,
+        duration: 0.8,
+        scrollTrigger: {
+            trigger: title,
+            start: 'top 80%'
+        }
     });
 });
 
@@ -34,9 +38,13 @@ gsap.utils.toArray('.era-title').forEach(title => {
 gsap.utils.toArray('.piece').forEach((piece, i) => {
     const fromX = i % 2 === 0 ? -60 : 60;
     gsap.from(piece, {
-    opacity: 0, x: fromX,
-    duration: 0.9,
-    ease: 'power2.out',
-    scrollTrigger: { trigger: piece, start: 'top 80%' }
+        opacity: 0,
+        x: fromX,
+        duration: 0.9,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: piece,
+            start: 'top 80%'
+        }
     });
 });

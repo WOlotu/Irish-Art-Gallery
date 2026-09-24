@@ -105,8 +105,18 @@ p {
     background-size: cover;
 }
 
-.hero h1 { color: #fff; font-size: 3.5rem; letter-spacing: 0.05em; }
-.hero p  { color: #fff; font-size: 1.2rem; opacity: 0.7; margin-top: 0.5rem; }
+.hero h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    letter-spacing: 0.05em;
+}
+
+.hero p {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
 
 /* Timeline section styling with max width, margin, and padding */
 .timeline {
@@ -150,14 +160,20 @@ p {
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
-.piece-info h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+.piece-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
 .piece-info .date {
     font-size: 0.9rem;
     color: #677358;
     display: block;
     margin-bottom: 0.5rem;
 }
-.piece-info p { opacity: 0.7; line-height: 1.5; }
+.piece-info p {
+    opacity: 0.7;
+    line-height: 1.5;
+}
 
 /* Footer styling with grid layout, background color, padding, and responsive design */
 .site-footer {
